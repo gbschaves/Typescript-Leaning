@@ -1,7 +1,8 @@
 // Type
 type Order = {
     productId: string;
-    price: number
+    price: number;
+    
 }
 
 type User = {
@@ -9,7 +10,8 @@ type User = {
     age: number;
     email: string;
     password?: string;
-    orders: Order[]
+    orders: Order[],
+    register(): string;
 };
 
 const user: User ={
@@ -21,6 +23,9 @@ const user: User ={
         productId: '1',
         price: 200
     }],
+    register() {
+        return '2'
+    },
 }
 
 user.password
@@ -43,18 +48,25 @@ const author: Author & User = {
         productId: '2',
         price: 250
     }],
+    register() {
+        return '2'
+    },
     books: ['48 leis do poder']
 }
 
 // Interface
 interface UserInterface {
     firstName: string;
-    email: string
+    email: string;
+    login(): string;
 }
 
 const emailUser: UserInterface = {
     email: 'gb.chaves@hotmail.com',
-    firstName: 'Guilherme'
+    firstName: 'Guilherme',
+    login() {
+        return 'Login Efetuado'
+    },
 }
 
 //interface UserInterface {
@@ -71,6 +83,9 @@ const newAuthor: UserInterface & AuthorInterface = {
     email: 'gb.chaves@hotmail.com',
     firstName: 'Guilherme',
     books: [],
+    login() {
+        return 'Login Efetuado'
+    },
 };
 
 

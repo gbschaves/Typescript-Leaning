@@ -1,0 +1,24 @@
+interface iPerson {
+    id: number;
+    age: number;
+    sayMyName(): string;
+}
+
+class Person implements iPerson{
+    readonly id: number;
+    protected name: string;
+    age: number;
+
+    constructor(id: number, name: string, age: number){
+        this.id = id;
+        this.name = name;
+        this.age = age;
+    };
+
+
+    sayMyName(): string {
+        return this.name
+    };
+};
+
+const personTest = new Person(1, 'Guilherme', 26);
