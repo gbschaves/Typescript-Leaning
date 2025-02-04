@@ -24,7 +24,7 @@ class GenericNumber<T> {
     zeroValue: T;
     sum:(x: T, y: T) => any;
 
-    constructor(zeroValue: T, sum: (x: T, y: T) => ) {
+    constructor(zeroValue: T, sum: (x: T, y: T) => T) {
        this.zeroValue = zeroValue;
        this.sum = sum;
     }
